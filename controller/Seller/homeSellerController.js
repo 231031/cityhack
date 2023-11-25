@@ -17,7 +17,7 @@ module.exports = async(req, res) => {
         }
         req.session.userId = UserSellerData._id;
         console.log(warningLocation);
-        res.render('homeSeller', {
+        res.render('homeSeller2', {
             UserSellerData,
             warningLocation,
         })

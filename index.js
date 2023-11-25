@@ -19,7 +19,8 @@ const indexController = require('./controller/indexController');
 const seller = require('./route/sellerRoute');
 const buyer = require('./route/buyerRoute');
 
-app.use(express.static('public'));
+app.use(express.static(__dirname +'/public'));
+// app.use(express.static('public'));
 app.use(express.static('uploads'));
 app.use(express.json()); // change json to js object
 app.use(express.urlencoded());

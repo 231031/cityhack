@@ -28,6 +28,7 @@ router.post('/location', locationSeller);
 router.get('/addproduct/:id', IsSeller, addProductController);
 router.post('/addproduct/:id', IsSeller, uploadimage, storeProductController);
 router.get('/listproduct/:id', IsSeller, listProductController);
+router.get('/listproduct/:id', IsSeller, listProductController);
 
 // UserSeller
 // router.get('/:id', homeSellerController);
