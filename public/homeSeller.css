@@ -11,13 +11,13 @@
 .home-1-1 {
   position: absolute;
 }
-.home-1-1 {
-  top: 61px;
-  left: 15px;
-  width: 42px;
-  height: 39px;
-  object-fit: cover;
-}
+    .home-1-1 {
+    top: 61px;
+    left: 15px;
+    width: 42px;
+    height: 39px;
+    object-fit: cover;
+    }
 .b {
   top: 71px;
   left: 77px;

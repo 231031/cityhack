@@ -3,12 +3,62 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="/addFood.css">
+  <!-- <link rel="stylesheet" href="/global.css"> -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Prompt:wght@100;200;300;400;500&display=swap" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
+</head>
+    <title>Add Food</title>
 </head>
 <body>
-    <form>
-        <label for="nameproduct"></label>
-        <input type="text" name="">
-    </form>
+    <div class="container">
+        <div class="head-food">
+            <img class="home-1-1" alt="" src="/image/store.png" />
+            <b class="b">เพิ่มรายละเอียดอาหาร</b>
+        </div>
+        
+    
+        <form class="form-addfood" action="/addFood/<%= UserSellerData._id %>" method="post">
+            <div class="form-food">
+                <label for="nameproduct">ชื่อสินค้า</label>
+                <input type="text" name="foodname"><br>
+            </div>
+            <div class="form-food">
+                <label for="file-product">รูปภาพ</label>
+                <label for="file-product"><img src="/image/addFile.png" id="image-file"></label>
+                <input type="file" accept="image/*" name="imageProduct" id="file-product" style="display: none"><br>
+            </div>
+            <div class="form-food2">
+                <label for="nameproduct">ราคา</label>
+                <input type="text" name="normalPrice">
+            </div>
+            <div class="form-food">
+                <label for="nameproduct">ประเภทสินค้า</label>
+                <input type="checkbox" id="order" name="category" value="order">
+                <label for="order">ตามสั่ง</label>
+                <input type="checkbox" id="order" name="category" value="finished">
+                <label for="order">อาหารสำเร็จ</label><br>
+            </div>
+            <div class="form-food" style="display: none;">
+                <label for="nameproduct">จำนวนสินค้า</label>
+                <input type="text" name="stock"><br>
+            </div>
+            <div class="form-food" style="display: none;">
+                <label for="nameproduct">เวลาเคลียร์สินค้า</label>
+                <input type="text" name="clearTime"><br>
+            </div>
+            
+    
+           
+            
+    
+            
+        </form>
+    </div>
+
 </body>
 </html>

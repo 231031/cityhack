@@ -21,7 +21,7 @@ const ProductSchema = new mongoose.Schema ({
         type: Number,
         require: true
     },
-    normalPrice : { 
+    normalPrice : {
         type: Number,
         require: true,
     },
@@ -32,14 +32,9 @@ const ProductSchema = new mongoose.Schema ({
     imageProduct : {
         type: String,
     },
-    exp : {
-        type: Number,
-        require: true,
-    },
     clearTime : {
         type: Number,
-        require: true,
-    },
+    }
 
 
 }, {
