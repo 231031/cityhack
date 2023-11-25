@@ -1,3 +1,12 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    /* font-family: 'Inter', sans-serif; */
+    font-family: 'Prompt', sans-serif;
+}
+
 .b,
 .home-1-1 {
   position: absolute;
@@ -18,32 +27,60 @@
   width: 68px;
   height: 20px;
 }
-.group-child,
-.select-child {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 393px;
-  height: 162px;
+
+.select-button {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;    
+}
+
+.group-item,
+.group-child {
+    position: absolute;
+    display: flex;
+    top: 0;
+    left: 0;
+    width: 393px;
+    height: 162px;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
 }
 .group-child {
   border-radius: var(--br-mini) 0 0 var(--br-mini);
   background-color: var(--color-linen);
   width: 135px;
-  height: 86px;
+  height: 40px;
 }
-.div {
+
+.ingredient
+{
+    position: absolute;
+    z-index: 10;
+    color: #EFE5D8;
+    text-decoration: none;
+    left: auto;
+    top: auto;
+    font-size: 25px;    
+}
+.food {
+    font-size: 25px;
   position: absolute;
-  top: 19px;
-  left: 18px;
+  z-index: 10;
+  color: #2E2929;
+  text-decoration: none;
+  left: auto;
+  top: auto;
 }
+
 .group-item,
 .rectangle-parent {
   position: absolute;
   top: 46px;
   left: 56px;
   width: 135px;
-  height: 86px;
+  height: 40px;
 }
 .group-item {
   top: 0;
@@ -52,7 +89,7 @@
   background-color: var(--color-gray);
   width: 150px;
 }
-.div1,
+/* .ingredient, */
 .rectangle-group {
   position: absolute;
   top: 19px;
@@ -75,17 +112,21 @@
   height: 33px;
 }
 .b1,
-.b2,
 .select {
   position: absolute;
+  
 }
+
 .select {
   top: 123px;
   left: 1px;
-  width: 393px;
-  height: 162px;
+  /* width: 393px; */
+  height: 110px;
+  background-color: #EC8F5E;
+  width: 100%;
   font-size: var(--font-size-21xl);
   color: var(--color-gray);
+  
 }
 .b2 {
   top: 718px;
@@ -108,66 +149,116 @@
   height: 33px;
 }
 .group-inner {
+
   border-radius: var(--br-mini);
   background-color: var(--color-gray);
   width: 149px;
   height: 156px;
 }
-.p {
-  margin: 0;
+.detail-product {
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-content: space-between;
 }
 .b-20-container {
   position: absolute;
   top: 102.6px;
   left: 0;
-  white-space: pre-wrap;
-  display: inline-block;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+justify-content: center;
   width: 149px;
   height: 48.4px;
 }
-.product-child,
+.product-child
+{
+    position: relative;
+    top: 15px;
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+}
+
 .rectangle-container {
-  position: absolute;
+  /* position: absolute; */
   top: 0;
   left: 0;
-  width: 149px;
-  height: 156px;
+  position: relative;
+  /* flex-direction: row; */
+  /* flex-wrap: wrap; */
 }
-.product-child {
-  top: 8px;
-  left: 7px;
-  border-radius: var(--br-mini);
-  background-color: var(--color-gainsboro);
-  width: 135px;
-  height: 81px;
+
+#image-product{
+    border: 0.1rem solid #EFE5D8;
+    top: 50px;
+    width: 120px;
+    height: 80px;
+    border-radius: var(--br-mini);
+}
+.product{
+    overflow-x: scroll;
 }
 .group-container,
-.group-parent,
 .product,
 .product1 {
   position: absolute;
   top: 40px;
-  left: 13px;
+  /* left: 13px; */
   width: 149px;
   height: 156px;
+  /* margin-left: 13px; */
 }
+
 .group-container,
 .group-parent,
 .product {
   left: 185px;
 }
 .group-container,
-.product {
+.product     {
   left: 357px;
 }
 .product {
-  top: 300px;
+    top: 250px;
   left: 23px;
   width: 506px;
   height: 196px;
   font-size: var(--font-size-xs);
   color: var(--color-white);
 }
+
+.product2 {
+    margin-left: 28px;
+    margin-top: 10px;
+    width: 506px;
+    height: 196px;
+    font-size: var(--font-size-xs);
+    color: var(--color-white);
+}
+.normal-product{
+    position: absolute;
+
+    top: 480px;
+    height: 240px;
+  width: 100%;
+  font-size: var(--font-size-xs);
+  color: var(--color-white);
+  background-color: #9FBB73;
+}
+
+.b4 {
+    font-size: var(--font-size-5xl);
+    display: inline-block;
+    color: #FFFFFF;
+    width: 162px;
+    margin-left: 21px;
+    margin-top: 10px;
+    /* height: 33px; */
+  }
+  
 .b10,
 .review-child {
   position: absolute;
@@ -202,16 +293,17 @@
 }
 .review {
   position: absolute;
-  top: 523px;
+  top: 800px;
   left: 1px;
   width: 487px;
   height: 182px;
+  
 }
 .selleradd {
   position: relative;
   background-color: var(--color-linen);
   width: 100%;
-  height: 852px;
+  height: 1000px;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-5xl);

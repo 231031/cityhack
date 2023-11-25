@@ -5,7 +5,7 @@ module.exports = async (req, res, next) => {
 
         var storage = multer.diskStorage({
                 destination: function(req, file, cb) {
-                        const uploadPath = path.resolve(__dirname, '..', 'uploads');
+                        const uploadPath = path.resolve(__dirname, '..', 'public/uploads');
                         cb(null, uploadPath);
                 },
                 filename: function(req, file, cb) {

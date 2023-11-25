@@ -13,6 +13,7 @@ const addProductController = require('../controller/Seller/addProductController'
 const uploadimage = require('../middleware/uploadimage');
 const storeProductController = require('../controller/Seller/storeProductController');
 const listProductController = require('../controller/Seller/listProductController');
+const addFoodController = require('../controller/Seller/addFoodController');
 
 
 
@@ -27,8 +28,9 @@ router.get('/:id', IsSeller, homeSellerController);
 router.post('/location', locationSeller);
 router.get('/addproduct/:id', IsSeller, addProductController);
 router.post('/addproduct/:id', IsSeller, uploadimage, storeProductController);
+router.get('/addfood/:id', IsSeller, addFoodController);
 router.get('/listproduct/:id', IsSeller, listProductController);
-router.get('/listproduct/:id', IsSeller, listProductController);
+router.post('/listproduct/:id', IsSeller, listProductController);
 
 // UserSeller
 // router.get('/:id', homeSellerController);
