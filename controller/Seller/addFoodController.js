@@ -10,7 +10,7 @@ module.exports = async (req, res) => {
             UserSellerData = UserSellerData2;
         }
         req.session.userId = UserSellerData._id;
-        console.log('Before render');
+        console.log('Before render Food');
         res.render('addFood', {
             UserSellerData,
         })

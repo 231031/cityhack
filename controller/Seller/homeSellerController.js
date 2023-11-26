@@ -1,5 +1,6 @@
 const UserSeller = require('../../models/UserSeller');
 const Product = require('../../models/Product');
+const Food = require('../../models/Food');
 
 module.exports = async(req, res) => {
     let id = req.session.userId;
@@ -19,12 +20,14 @@ module.exports = async(req, res) => {
         req.session.userId = UserSellerData._id;
         let storename = UserSellerData.storename;
         const product = await Product.find({storename: storename});
-        console.log(product); 
-        console.log(warningLocation);
+        const food = await Food.find({storename: storename});
+        // console.log(product); 
+        // console.log(warningLocation);
         res.render('homeSeller2', {
             UserSellerData,
             warningLocation,
             product,
+            food,
         })
     } else {
         res.redirect('/seller/login');

@@ -11,47 +11,65 @@
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500&family=Prompt:wght@100;200;300;400;500&display=swap" rel="stylesheet">
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100;200;300;400;500&family=Sarabun:wght@400;500;600&display=swap" rel="stylesheet">
-</head>
     <title>Add Food</title>
+    <script>
+        function myFunction() {
+            // Get the checkbox
+            var checkBox = document.getElementById("finished-checkbox");
+            // Get the output text
+            var show1 = document.getElementById("finished");
+            var show2 = document.getElementById("finished2");
+          
+            // If the checkbox is checked, display the output show
+            if (checkBox.checked == true){
+              show1.style.display = "block";
+              show2.style.display = "block";
+            } else {
+              show1.style.display = "none";
+              show2.style.display = "none";
+            }
+          }
+    </script>
 </head>
 <body>
     <div class="container">
         <div class="head-food">
-            <img class="home-1-1" alt="" src="/image/store.png" />
+            <a href="/seller/<%= UserSellerData._id %>" id="back-home"><img class="home-1-1" alt="" src="/image/store.png" style="text-decoration: none;"> </a>
+            
             <b class="b">เพิ่มรายละเอียดอาหาร</b>
         </div>
         
     
-        <form class="form-addfood" action="/addFood/<%= UserSellerData._id %>" method="post">
+        <form class="form-addfood" action="/seller//addFood/<%= UserSellerData._id %>" method="post" enctype="multipart/form-data">
             <div class="form-food">
                 <label for="nameproduct">ชื่อสินค้า</label>
-                <input type="text" name="foodname"><br>
+                <input type="text" name="foodname" required><br>
             </div>
             <div class="form-food">
                 <label for="file-product">รูปภาพ</label>
                 <label for="file-product"><img src="/image/addFile.png" id="image-file"></label>
-                <input type="file" accept="image/*" name="imageProduct" id="file-product" style="display: none"><br>
+                <input type="file"   name="imageProduct" id="file-product" style="display: none" required><br>
             </div>
             <div class="form-food2">
-                <label for="nameproduct">ราคา</label>
-                <input type="text" name="normalPrice">
+                <label for="price">ราคา</label>
+                <input type="number" name="normalPrice" id="price" required>
             </div>
             <div class="form-food">
-                <label for="nameproduct">ประเภทสินค้า</label>
-                <input type="checkbox" id="order" name="category" value="order">
+                <label for="sel-type">ประเภทสินค้า</label>
+                <input type="checkbox"  name="category" value="order" id="sel-type">
                 <label for="order">ตามสั่ง</label>
-                <input type="checkbox" id="order" name="category" value="finished">
+                <input type="checkbox" id="finished-checkbox" name="category" value="finished" onclick="myFunction()" id="sel-type">
                 <label for="order">อาหารสำเร็จ</label><br>
             </div>
-            <div class="form-food" style="display: none;">
-                <label for="nameproduct">จำนวนสินค้า</label>
-                <input type="text" name="stock"><br>
+            <div class="form-food3" id="finished" style="display:none">
+                <label for="stock-order">จำนวนสินค้า</label>
+                <input type="number" name="stock" id="stock-order"><br>
             </div>
-            <div class="form-food" style="display: none;">
-                <label for="nameproduct">เวลาเคลียร์สินค้า</label>
-                <input type="text" name="clearTime"><br>
+            <div class="form-food3" id="finished2" style="display:none">
+                <label for="time">เวลาเคลียร์สินค้า</label>
+                <input type="text" name="clearTime" id="time"><br>
             </div>
-            
+            <button id="btn-food" type="submit">บันทึก</button>
     
            
             

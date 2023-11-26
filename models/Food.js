@@ -1,6 +1,6 @@
 const mongoose = require('mongoose');
 
-const ProductSchema = new mongoose.Schema ({
+const FoodSchema = new mongoose.Schema ({
     foodname : {
         type: String,
         require: true,
@@ -11,7 +11,6 @@ const ProductSchema = new mongoose.Schema ({
     },
     discountedPrice : {
         type: Number,
-        require: true,
     },
     category : {
         type: String,
@@ -33,7 +32,7 @@ const ProductSchema = new mongoose.Schema ({
         type: String,
     },
     clearTime : {
-        type: Number,
+        type: String,
     }
 
 
@@ -42,5 +41,5 @@ const ProductSchema = new mongoose.Schema ({
 });
 
 
-const Product = mongoose.model('Product', ProductSchema);
-module.exports = Product;
+const Food = mongoose.model('Food', FoodSchema);
+module.exports = Food;

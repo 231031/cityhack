@@ -33,11 +33,11 @@ const ProductSchema = new mongoose.Schema ({
         type: String,
     },
     exp : {
-        type: Number,
+        type: String,   
         require: true,
     },
     clearTime : {
-        type: Number,
+        type: String,
         require: true,
     },
 

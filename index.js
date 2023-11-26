@@ -5,9 +5,11 @@ const expressSession = require('express-session');
 const flash = require('connect-flash'); // get error and show
 const bodyparser = require("body-parser");
 const dotenv = require('dotenv');
+const cors = require('cors');
 const app = express();
 
 dotenv.config();
+app.use(cors())
 // MongoDB Connection
 const mongoconnect = process.env.MONGODB
 mongoose.connect(mongoconnect, {

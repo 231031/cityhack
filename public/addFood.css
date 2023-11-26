@@ -27,11 +27,17 @@ label {
     margin: 0;
 }
 
+a {
+    text-decoration: none;
+}
 input {
     border-radius: 10px;
     border: transparent;
     background-color: #9FBB73;
-    width: 80px;
+    width: 85px;
+    height: 30px;
+    font-size: medium;
+    font-weight: 500;
 }
 
 .form-food{
@@ -49,6 +55,16 @@ input {
     justify-content: space-between;
     margin-top: 30px;
 }
+.form-food3 {
+    margin-top: 30px;
+}
+
+#stock-order {
+    margin-left: 93px;
+}
+#time {
+    margin-left: 65px;
+}
 
 #image-file {
     width: 50px;
@@ -61,4 +77,20 @@ input {
     left: 30px;
     width: 100%;
     height: 20px;
+}
+
+#btn-food {
+    position: absolute;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    top: 600px;
+    left: 110px;
+    width: 150px;
+    height: 45px;
+    background-color: #EC8F5E;
+    border: transparent;
+    border-radius: 10px;
+    font-size: medium;
+    font-weight: 500;
 }

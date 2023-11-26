@@ -74,6 +74,14 @@
   top: auto;
 }
 
+#flash-sale {
+    position: absolute;
+    font-size: 13px;
+    left: 97px;
+    top: -9px;
+    color: #F04F30;
+    text-decoration: line-through;
+}
 .group-item,
 .rectangle-parent {
   position: absolute;
@@ -135,12 +143,12 @@
   width: 185px;
   height: 33px;
 }
-.b3,
-.group-inner {
+.b3 {
   position: absolute;
   top: 0;
   left: 0;
 }
+
 .b3 {
   font-size: var(--font-size-5xl);
   display: inline-block;
@@ -154,12 +162,27 @@
   background-color: var(--color-gray);
   width: 149px;
   height: 156px;
+  display: flex;
+  position: relative;
+  flex-direction: row;
+  /* margin-left: 10px; */
+  /* justify-content: space-around; */
+  /* margin-right: 10px; */
 }
 .detail-product {
+    /* display: flex;
+    flex-direction: row; */
+    /* justify-content: space-between; */
+    /* align-content: space-between; */
+    font-size: 13px;
+}
+
+
+.show-detail {
     display: flex;
     flex-direction: row;
-    flex-wrap: wrap;
-    align-content: space-between;
+    justify-content: space-around;
+    width: 100%;
 }
 .b-20-container {
   position: absolute;
@@ -174,28 +197,28 @@ justify-content: center;
 }
 .product-child
 {
-    position: relative;
-    top: 15px;
-    display: flex;
-    flex-direction: row;
+    position: absolute;
+    top: 13px;
+    left: 13px
+    /* display: flex;
+    flex-direction: column;
     align-items: center;
-    justify-content: center;
+    justify-content: center; */
 }
 
 .rectangle-container {
   /* position: absolute; */
-  top: 0;
-  left: 0;
-  position: relative;
-  /* flex-direction: row; */
-  /* flex-wrap: wrap; */
+width: 100%;
+display: flex;
+flex-direction: row;
+overflow-x: scroll;
 }
 
 #image-product{
-    border: 0.1rem solid #EFE5D8;
+    /* border: 0.1rem solid #EFE5D8; */
     top: 50px;
-    width: 120px;
-    height: 80px;
+    width: 125px;
+    height: 83px;
     border-radius: var(--br-mini);
 }
 .product{
@@ -233,7 +256,7 @@ justify-content: center;
 .product2 {
     margin-left: 28px;
     margin-top: 10px;
-    width: 506px;
+    width: 430px;
     height: 196px;
     font-size: var(--font-size-xs);
     color: var(--color-white);
@@ -293,7 +316,7 @@ justify-content: center;
 }
 .review {
   position: absolute;
-  top: 800px;
+  top: 730px;
   left: 1px;
   width: 487px;
   height: 182px;
@@ -303,7 +326,7 @@ justify-content: center;
   position: relative;
   background-color: var(--color-linen);
   width: 100%;
-  height: 1000px;
+  height: 932px;
   overflow: hidden;
   text-align: left;
   font-size: var(--font-size-5xl);
